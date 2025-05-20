@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Life Experience</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Campus Life!</h1>
+    <div class="theme-switcher">
+      <button id="lightBtn" class="theme-btn">Light Theme</button>
+      <button id="darkBtn" class="theme-btn">Dark Theme</button>
+    </div>
+  </header>
+
+  <section class="tabs-section">
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="gallery">Campus Gallery</button>
+      <button class="tab-btn" data-tab="events">Events</button>
+      <button class="tab-btn" data-tab="form">Join Us</button>
+    </nav>
+
+    <div id="gallery" class="tab-content active">
+      <h2>Campus Gallery</h2>
+      <div class="slideshow">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Campus Library" class="slide active" />
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Campus Students" class="slide" />
+        <img src="https://images.unsplash.com/photo-1517524206127-48bbd363f3d4?auto=format&fit=crop&w=800&q=80" alt="Lecture Hall" class="slide" />
+      </div>
+      <button id="prevSlide" class="slide-btn">‹ Prev</button>
+      <button id="nextSlide" class="slide-btn">Next ›</button>
+    </div>
+
+    <div id="events" class="tab-content">
+      <h2>Upcoming Campus Events</h2>
+      <ul class="events-list">
+        <li><strong>Freshers’ Welcome:</strong> September 10th, Main Auditorium</li>
+        <li><strong>Annual Sports Day:</strong> October 5th, Sports Complex</li>
+        <li><strong>Career Fair:</strong> November 12th, Conference Hall</li>
+      </ul>
+    </div>
+
+    <div id="form" class="tab-content">
+      <h2>Join the Campus Community</h2>
+      <form id="joinForm" novalidate>
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password <span class="required">*</span> (min 8 characters)</label>
+        <input type="password" id="password" name="password" required minlength="8" />
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+      <div id="formMessage"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,257 @@
+ /* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 20px 50px;
+  background-color: #fff;
+  color: #222;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Light & Dark Themes */
+body.light {
+  background-color: #fefefe;
+  color: #222;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Header & Theme Buttons */
+header {
+  margin-bottom: 30px;
+}
+
+.theme-switcher {
+  text-align: center;
+  margin: 15px 0 40px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 10px 25px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.theme-btn:hover {
+  background-color: #6a5acd;
+  color: white;
+  border-color: #6a5acd;
+  transform: scale(1.05);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.tab-btn {
+  background-color: #eee;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.tab-btn.active {
+  background-color: #6a5acd;
+  color: white;
+}
+
+/* Dark mode for tabs */
+body.dark .tab-btn {
+  background-color: #333;
+  color: #eee;
+}
+
+body.dark .tab-btn:hover {
+  background-color: #555;
+}
+
+body.dark .tab-btn.active {
+  background-color: #836fff;
+  color: white;
+}
+
+/* Tab Content */
+.tab-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: none;
+  background: #fafafa;
+  padding: 20px 30px;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0 0 10px rgba(106, 90, 205, 0.2);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Dark mode tab content */
+body.dark .tab-content {
+  background: #222;
+  box-shadow: 0 0 10px rgba(131, 111, 255, 0.5);
+}
+
+/* Slideshow Styles */
+.slideshow {
+  position: relative;
+  height: 400px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slideshow img {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow img.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Slide Buttons */
+.slide-btn {
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: #836fff;
+}
+
+/* Events List */
+.events-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.events-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Dark mode events */
+body.dark .events-list li {
+  border-color: #555;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #6a5acd;
+  outline: none;
+}
+
+.required {
+  color: red;
+}
+
+.submit-btn {
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #836fff;
+}
+
+/* Form message */
+#formMessage {
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: green;
+}
+
+/* Error styles */
+input.error {
+  border-color: red;
+}
+
+body.dark input[type="text"],
+body.dark input[type="email"],
+body.dark input[type="password"] {
+  background-color: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark input.error {
+  border-color: #ff5c5c;
+}
